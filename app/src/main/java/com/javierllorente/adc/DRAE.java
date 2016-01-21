@@ -22,8 +22,8 @@ import java.net.URLEncoder;
 
 public class DRAE {
 
-    private static final String RAE_SERVER = "lema.rae.es";
-    public static final String RAE_URL = "http://" + RAE_SERVER + "/drae/srv/search?val=";
+    private static final String RAE_SERVER = "dle.rae.es";
+    public static final String RAE_URL = "http://" + RAE_SERVER + "/?w=";
 
     public String encode(String termino) {
 
