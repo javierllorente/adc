@@ -29,7 +29,7 @@ public class DRAE {
 
         String encoded = null;
         try {
-            encoded = URLEncoder.encode(termino, "iso-8859-1");
+            encoded = URLEncoder.encode(termino, "utf-8");
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
