@@ -1,0 +1,2 @@
+# adc
+Diccionario castellano
