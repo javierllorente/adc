@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     WebView mWebView = null;
     WebFragment webFragment = null;
     SearchView searchView = null;
+    private static final String PAG_AYUDA = "file:///android_asset/ayuda.html";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,16 +98,17 @@ public class MainActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            Intent i = new Intent(MainActivity.this, SettingsActivity.class);
-            startActivity(i);
-            return true;
+        switch(id) {
+            case R.id.action_settings:
+                Intent i = new Intent(MainActivity.this, SettingsActivity.class);
+                startActivity(i);
+                return true;
+            case R.id.action_help:
+                mWebView.loadUrl(PAG_AYUDA);
+                return true;
+            default:
+            return super.onOptionsItemSelected(item);
         }
-
-        // TODO: add "ayuda"
-
-        return super.onOptionsItemSelected(item);
     }
 
     @Override
