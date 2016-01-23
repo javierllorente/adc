@@ -90,13 +90,13 @@ public class WebFragment extends WebViewFragment {
 
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
-            if (!url.contains("rae.es")) {
+            Log.i(TAG, "shouldOverrideUrlLoading() url: " + url);
+            if (url.contains("rae.es") || url.startsWith("file:///")) {
+                view.loadUrl(url);
+            } else {
                 Intent browserIntent = new Intent(Intent.ACTION_VIEW);
                 browserIntent.setData(Uri.parse(url));
                 startActivity(browserIntent);
-            } else {
-                view.loadUrl(url);
-                Log.i(TAG, "shouldOverrideUrlLoading()");
             }
             return true;
         }
