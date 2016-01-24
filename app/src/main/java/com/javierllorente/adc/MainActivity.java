@@ -30,7 +30,9 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebChromeClient;
 import android.webkit.WebView;
+import android.widget.ProgressBar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
     WebFragment webFragment = null;
     SearchView searchView = null;
     private static final String PAG_AYUDA = "file:///android_asset/ayuda.html";
+    ProgressBar progressBar = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +53,16 @@ public class MainActivity extends AppCompatActivity {
 
         webFragment = (WebFragment) getFragmentManager().findFragmentById(R.id.webFragment);
         mWebView = webFragment.getWebView();
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        progressBar.setMax(100);
+        mWebView.setWebChromeClient(new WebChromeClient() {
+            public void onProgressChanged(WebView view, int progress) {
+                progressBar.setProgress(progress);
+                if (progress == 100) {
+                    progressBar.setProgress(0);
+                }
+            }
+        });
     }
 
     @Override
