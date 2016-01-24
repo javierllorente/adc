@@ -33,6 +33,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.webkit.WebViewFragment;
+import android.widget.Toast;
 
 public class WebFragment extends WebViewFragment {
 
@@ -115,6 +116,11 @@ public class WebFragment extends WebViewFragment {
             InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
             imm.hideSoftInputFromWindow(mWebView.getWindowToken(), 0);
             Log.i(TAG, "onPageFinished()");
+        }
+
+        @Override
+        public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
+            Toast.makeText(getActivity(), "Error :( " + description, Toast.LENGTH_SHORT).show();
         }
     }
 }
