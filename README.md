@@ -1,9 +1,7 @@
 # adc
-Diccionario castellano
-==
 Paquete: com.javierllorente.adc
 
-"adc" es una pequeña utilidad para consultar la versión digital del diccionario
+"Diccionario castellano" es una pequeña utilidad para consultar la versión digital del diccionario
 castellano de la RAE de forma fácil y rápida. No redistribuye ninguna definición de la RAE.
 
 Copyright (C) 2012-2016 Javier Llorente <javier@opensuse.org>
@@ -13,4 +11,4 @@ Nota: Las definiciones que se muestran en esta aplicación son propiedad de la R
 
 Licencia
 --------
-Esta aplicación está bajo la GPL. Para más detalles, echa un vistazo al archivo [gpl-3.0.txt](gpl-3.0.txt).
+Esta aplicación está bajo la GPL. Para más detalles, echa un vistazo al archivo [LICENSE](LICENSE).
