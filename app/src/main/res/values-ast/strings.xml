@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Diccionariu castellán</string>
+    <string name="search_hint">Consultar...</string>
+    <string name="action_settings">Axustes</string>
+    <string name="action_help">Ayuda</string>
+
+    <string name="title_activity_about">Tocante a</string>
+    <string name="action_about">Tocante a</string>
+    <string name="about_legal">Esta aplicación ye una ferramienta pa consultar la versión dixital del DRAE (Diccionario de la Real Academia de la lengua Española) d\'un mou cenciellu y rápidu. Nun redistribúi denguna definición de la RAE.</string>
+    <string name="about_description">Diccionariu castellán</string>
+    <string name="about_author">© Javier Llorente 2012-2016\n
+  www.javierllorente.com</string>
+    <string name="about_rae">Les definiciones son propiedá de la RAE\n
+  © Real Academia Española\n
+  www.rae.es</string>
+
+    <string name="title_activity_settings">Axustes</string>
+    <string name="pref_header_cleanup">Llimpieza</string>
+    <string name="pref_about">Tocante a</string>
+</resources>
