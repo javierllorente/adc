@@ -17,6 +17,7 @@
 
 package com.javierllorente.adc;
 
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -98,7 +99,12 @@ public class WebFragment extends WebViewFragment {
             } else {
                 Intent browserIntent = new Intent(Intent.ACTION_VIEW);
                 browserIntent.setData(Uri.parse(url));
-                startActivity(browserIntent);
+                try {
+                    startActivity(browserIntent);
+                } catch (ActivityNotFoundException e) {
+                    Toast.makeText(getActivity(), "No app found to open " + url,
+                            Toast.LENGTH_SHORT).show();
+                }
             }
             return true;
         }
